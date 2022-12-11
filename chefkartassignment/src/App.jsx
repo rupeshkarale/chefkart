@@ -42,10 +42,10 @@ function App() {
   
   return (
     <div className="App">
-      <TableContainer>
-        <Table size="md" variant="striped" colorScheme="facebook" gap="5">
+      
+        <Table  variant="striped" size={'md'} w='100%' colorScheme="facebook" gap="5">
           <Thead>
-            <Tr textAlign="left">
+            <Tr textAlign="left" >
               {/* <Th>
                 First Name <HamburgerIcon onClick={toggleShow} />
                 {show ? <Dropdown /> : ""}
@@ -70,6 +70,7 @@ function App() {
           <Tbody>
             {data.map((ele, index) => (
               <Tr
+                
                 textAlign="left"
                 _hover={{ borderColor: "whiteAlpha.200", bgColor: "yellow" }}
               >
@@ -95,7 +96,7 @@ function App() {
             ))}
           </Tbody>
         </Table>
-      </TableContainer>
+      
     </div>
   );
 }
