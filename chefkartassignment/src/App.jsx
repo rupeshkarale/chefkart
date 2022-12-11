@@ -38,10 +38,11 @@ function App() {
     console.log(newdata)
     setData(() => newdata);
   };
+
+  
   return (
     <div className="App">
       <TableContainer>
-        
         <Table size="md" variant="striped" colorScheme="facebook" gap="5">
           <Thead>
             <Tr textAlign="left">
@@ -68,7 +69,10 @@ function App() {
           </Thead>
           <Tbody>
             {data.map((ele, index) => (
-              <Tr textAlign="left">
+              <Tr
+                textAlign="left"
+                _hover={{ borderColor: "whiteAlpha.200", bgColor: "yellow" }}
+              >
                 <Td>{ele.first_name}</Td>
                 <Td>{ele.last_name}</Td>
                 <Td>{ele.email}</Td>
